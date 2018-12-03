@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php declare(strict_types = 1);
+
+// Remove the shared memory segment
+$sharedMemoryKey = @ftok(realpath(__DIR__ . '/../src/VoteConfig.php'), 'v');
+$semaphore = @sem_get($sharedMemoryKey);
+@sem_acquire($semaphore);
+$sharedMemorySegment = @shm_attach($sharedMemoryKey);
+@shm_remove($sharedMemorySegment);
+@shm_detach($sharedMemorySegment);
+@sem_release($semaphore);

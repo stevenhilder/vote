@@ -1,0 +1,17 @@
+<div class="ui padded segment">
+	<h1 class="ui header">{{ title }}</h1>
+
+	{{ !results }}
+
+	<div class="ui divider"></div>
+
+	<a class="ui button" href="/vote">Back</a>
+</div>
+
+<script>
+	$(function () {
+		$('.ui.progress').progress({
+			autoSuccess: false,
+		});
+	});
+</script>

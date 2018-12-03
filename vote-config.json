@@ -1,0 +1,16 @@
+{
+	"title": "Which of these colors do you prefer?",
+
+	"options": [
+		"Red",
+		"Green",
+		"Blue",
+		"I don't have a preference"
+	],
+
+	"servers": [
+		"192.168.1.1",
+		"192.168.1.2",
+		"192.168.1.3"
+	]
+}

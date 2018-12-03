@@ -1,0 +1,21 @@
+<div class="ui padded segment">
+
+	<form action="/vote" class="ui form" method="POST">
+
+		<div class="grouped fields">
+			<label for="vote">{{ title }}</label>
+			{{ !vote-options }}
+		</div>
+
+		<div class="ui divider"></div>
+
+		<input class="ui button primary" type="submit" value="Vote">
+	</form>
+
+</div>
+
+<script>
+	$(function () {
+		$('.ui.radio.checkbox').checkbox();
+	});
+</script>

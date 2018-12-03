@@ -1,0 +1,21 @@
+#!/usr/bin/env php72
+<?php declare(strict_types = 1);
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$server = new WebSocket\Server([
+	'port' => 9001,
+	'timeout' => 3600,
+]);
+
+while ($connection = $server->accept()) {
+	if ($server->receive() === 'get-results') {
+		$config = HomeAssignment\VoteConfig::load(__DIR__ . '/../vote-config.json');
+		$results = $config->getResults(FALSE);
+		$server->send(serialize(array_combine(array_map(function (HomeAssignment\VoteOption $option): int {
+			return $option->getID();
+		}, $results), array_map(function (HomeAssignment\VoteOption $option): int {
+			return $option->getCount();
+		}, $results))), 'text', FALSE);
+	}
+}

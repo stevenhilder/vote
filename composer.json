@@ -1,0 +1,26 @@
+{
+	"authors": [
+		{
+			"name": "Steve Hilder",
+			"email": "stevehilder@yahoo.co.uk"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"HomeAssignment\\": "src/"
+		}
+	},
+	"license": [
+		"CC0-1.0",
+		"Unlicense"
+	],
+	"require": {
+		"php": ">=7.2",
+		"ext-json": "*",
+		"ext-pcre": "*",
+		"ext-sysvsem": "*",
+		"ext-sysvshm": "*",
+		"textalk/websocket": "^1.2"
+	},
+	"type": "project"
+}
