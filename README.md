@@ -19,7 +19,7 @@
 	* src/
 		* [VoteOption.php](/src/VoteOption.php) - A simple class representing a single vote option
 		* [VoteConfig.php](/src/VoteConfig.php) - Loads configuration file and provides logic for counting votes and returning results
-		* [VoteApplication.php](/src/VoteApplication) - Deals with request/response routing and HTML rendering
+		* [VoteApplication.php](/src/VoteApplication.app) - Deals with request/response routing and HTML rendering
 		* templates/ - HTML templates for rendering responses with support for `{{ placeholders }}`
 	* bin/
 		* [websocket-server](/bin/websocket-server) - Invoked automatically by `make` or `make run`
