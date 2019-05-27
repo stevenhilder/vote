@@ -1,7 +1,7 @@
 SHELL = /bin/bash
 
 COMPOSER_FILENAME = composer.phar
-COMPOSER_VERSION = 1.7.3
+COMPOSER_VERSION = 1.8.5
 
 .PHONY: all clean dependencies reset run
 .DEFAULT_GOAL = all
